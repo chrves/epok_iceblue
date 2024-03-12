@@ -1,1 +1,1 @@
-[]
+[{"market_1": "UMA-USD", "market_2": "ZEC-USD", "hedge_ratio": 0.1384860410480215, "z_score": 1.556961589495268, "half_life": 2.0, "order_id_m1": "7f7c77ec8891a0bc46648bd388062d917848c3bb797e087cb76cfbcc5dce376", "order_m1_size": "20.2", "order_m1_side": "SELL", "order_time_m1": "2024-03-12T18:50:19.064094", "order_id_m2": "5f9b92018f208db06cde08b92f70a6bce556689a28bf37bfed00a84bd625bfb", "order_m2_size": "3.07", "order_m2_side": "BUY", "order_time_m2": "2024-03-12T18:50:41.026201", "pair_status": "LIVE", "comments": ""}]
