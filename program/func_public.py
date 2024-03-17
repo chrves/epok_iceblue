@@ -23,7 +23,7 @@ def get_candles_recent(client, market):
   candles = client.public.get_candles(
     market= market,
     resolution=RESOLUTION,
-    limit=100
+    limit=80
   )
 
   # Structure data
