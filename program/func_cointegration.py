@@ -4,6 +4,8 @@ import statsmodels.api as sm
 from statsmodels.tsa.stattools import coint
 from constants import MAX_HALF_LIFE, WINDOW
 
+# Calculate Half Life
+# https://www.pythonforfinance.net/2016/05/09/python-backtesting-mean-reversion-part-2/
 
 def calculate_half_life(spread):
   df_spread = pd.DataFrame(spread, columns=["spread"])
@@ -14,7 +16,7 @@ def calculate_half_life(spread):
   spread_lag2 = sm.add_constant(spread_lag)
   model = sm.OLS(spread_ret, spread_lag2)
   res = model.fit()
-  halflife = round(-np.log(2) / res.params.iloc[1], 0)
+  halflife = round(-np.log(2) / res.params.iloc[1], 0) #halflife = round(-np.log(2) / res.params[1], 0)
   return halflife
 
 
@@ -38,9 +40,8 @@ def calculate_cointegration(series_1, series_2):
   p_value = coint_res[1]
   critical_value = coint_res[2][1]
   model = sm.OLS(series_1, series_2).fit()
-  hedge_ratio = model.params[0]#change to 1
-  #intercept = model.params[0]
-  spread = series_1 - (hedge_ratio * series_2) #- intercept
+  hedge_ratio = model.params[0]
+  spread = series_1 - (hedge_ratio * series_2)
   half_life = calculate_half_life(spread)
   t_check = coint_t < critical_value
   coint_flag = 1 if p_value < 0.05 and t_check else 0

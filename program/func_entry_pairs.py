@@ -45,8 +45,7 @@ def open_positions(client):
     hedge_ratio = row["hedge_ratio"]
     half_life = row["half_life"]
 
-
-        # Get prices
+    # Get prices
     series_1 = get_candles_recent(client, base_market)
     series_2 = get_candles_recent(client, quote_market)
 
@@ -151,5 +150,4 @@ def open_positions(client):
   if len(bot_agents) > 0:
     with open("bot_agents.json", "w") as f:
       json.dump(bot_agents, f)
-
             

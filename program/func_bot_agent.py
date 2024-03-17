@@ -30,8 +30,8 @@ class BotAgent:
     half_life,
     hedge_ratio,
   ):
-    
-        # Initialize class variables
+
+    # Initialize class variables
     self.client = client
     self.market_1 = market_1
     self.market_2 = market_2
@@ -45,7 +45,6 @@ class BotAgent:
     self.z_score = z_score
     self.half_life = half_life
     self.hedge_ratio = hedge_ratio
-
 
     # Initialze output variable
     # Pair status options are FAILED, LIVE, CLOSE, ERROR
@@ -66,7 +65,6 @@ class BotAgent:
       "pair_status": "",
       "comments": "",
     }
-    
 
   # Check order status by id
   def check_order_status_by_id(self, order_id):
@@ -194,7 +192,7 @@ class BotAgent:
           print(order_status_close_order)
 
           # Send Message
-          #send_message("Failed to execute. Code red. Error code: 100")
+          send_message("Failed to execute. Code red. Error code: 100")
 
           # ABORT
           exit(1)
@@ -206,7 +204,7 @@ class BotAgent:
         print(order_status_close_order)
 
         # Send Message
-        #send_message("Failed to execute. Code red. Error code: 101")
+        send_message("Failed to execute. Code red. Error code: 101")
 
         # ABORT
         exit(1)
@@ -215,4 +213,3 @@ class BotAgent:
     else:
       self.order_dict["pair_status"] = "LIVE"
       return self.order_dict
-      
