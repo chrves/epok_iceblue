@@ -1,1 +1,1 @@
-[]
+[{"market_1": "LTC-USD", "market_2": "LINK-USD", "hedge_ratio": 4.56759417477606, "z_score": 1.4816039626255646, "half_life": 8.0, "order_id_m1": "30dda756c2225ded8919ad42664e5c6cfb3352f8efe199bc4270d94d119c9ea", "order_m1_size": "0.47", "order_m1_side": "SELL", "order_time_m1": "2024-03-23T11:31:40.871650", "order_id_m2": "173a1c1b495ed2a172b182178012e4242666b361022d56bf66cd08350aa119d", "order_m2_size": "2.2", "order_m2_side": "BUY", "order_time_m2": "2024-03-23T11:32:00.081852", "pair_status": "LIVE", "comments": ""}]
